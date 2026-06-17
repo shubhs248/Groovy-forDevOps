@@ -1,0 +1,25 @@
+// Solution - Scenario 3.3 Scripted Pipeline with a Reusable Function
+
+def notify(String message) {
+    echo "NOTIFY: ${message}"
+}
+
+node {
+    try {
+        stage('Build') {
+            notify('building')
+            sh 'make build'
+        }
+        stage('Test') {
+            notify('testing')
+            sh 'make test'
+        }
+        stage('Deploy') {
+            notify('deploying')
+            sh 'make deploy'
+        }
+    } catch (err) {
+        notify('pipeline failed')
+        throw err   // re-throw so Jenkins still marks the build as failed
+    }
+}

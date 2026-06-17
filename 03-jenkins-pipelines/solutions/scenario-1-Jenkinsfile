@@ -1,0 +1,40 @@
+// Solution - Scenario 3.1 Basic Declarative Pipeline
+
+pipeline {
+    agent any
+
+    environment {
+        APP_NAME = 'web-app'
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                echo "Building ${APP_NAME}"
+                sh 'make build'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'make test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'make deploy'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Build succeeded'
+        }
+        failure {
+            echo 'Build failed'
+        }
+        always {
+            echo 'Pipeline finished'
+        }
+    }
+}

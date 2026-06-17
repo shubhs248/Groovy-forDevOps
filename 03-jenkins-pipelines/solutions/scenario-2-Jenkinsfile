@@ -1,0 +1,39 @@
+// Solution - Scenario 3.2 Parameters, Parallel Stages, Conditional Deploy
+
+pipeline {
+    agent any
+
+    parameters {
+        choice(name: 'ENVIRONMENT', choices: ['dev', 'prod'], description: 'Where to deploy')
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'make build'
+            }
+        }
+        stage('Tests') {
+            parallel {
+                stage('Unit') {
+                    steps {
+                        sh 'make unit'
+                    }
+                }
+                stage('Integration') {
+                    steps {
+                        sh 'make integration'
+                    }
+                }
+            }
+        }
+        stage('Deploy') {
+            when {
+                expression { params.ENVIRONMENT == 'prod' }
+            }
+            steps {
+                sh 'make deploy'
+            }
+        }
+    }
+}
