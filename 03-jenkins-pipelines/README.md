@@ -1,5 +1,17 @@
 # Part 3 — Jenkins Pipelines
 
+*Pipeline stages, with a parallel block:*
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="../docs/01-pipeline-stages-dark.png"><img alt="Jenkins pipeline stages" src="../docs/01-pipeline-stages.png"></picture>
+
+*The structure of a declarative pipeline:*
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="../docs/02-declarative-structure-dark.png"><img alt="Declarative pipeline structure" src="../docs/02-declarative-structure.png"></picture>
+
+*How the controller hands work to agents:*
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="../docs/03-jenkins-agents-dark.png"><img alt="Jenkins controller and agents" src="../docs/03-jenkins-agents.png"></picture>
+
 ## 🎯 Goal
 Write the thing Groovy is most used for in DevOps: a `Jenkinsfile`. You will write a basic declarative pipeline, then add parameters/conditions/parallel stages, then see the scripted style and reusable functions.
 
