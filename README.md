@@ -12,6 +12,20 @@
 
 Most people meet Groovy through a `Jenkinsfile` and copy-paste their way through it. This lab helps you actually understand it: first the Groovy language (lists, maps, closures, strings), then small automation tasks, then writing real Jenkins pipelines from a spec.
 
+## 🗺️ Visual overview
+
+A few pictures before the practice. Full set (light + dark, ready for slides/LinkedIn) is in the [diagram gallery](docs/README.md).
+
+**Jenkins pipeline stages** — Checkout → Build → Test → (Lint + Security in parallel) → Deploy → Post.
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/01-pipeline-stages-dark.png"><img alt="Jenkins pipeline stages" src="docs/01-pipeline-stages.png"></picture>
+
+**Declarative pipeline structure** and **controller + agents**.
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/02-declarative-structure-dark.png"><img alt="Declarative pipeline structure" src="docs/02-declarative-structure.png"></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/03-jenkins-agents-dark.png"><img alt="Jenkins controller and agents" src="docs/03-jenkins-agents.png"></picture>
+
 ## 🗂️ What's inside
 
 ```

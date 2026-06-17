@@ -1,0 +1,11 @@
+flowchart TB
+    p[pipeline] --> agent[agent]
+    p --> env[environment]
+    p --> stages[stages]
+    stages --> stage[stage: Build]
+    stage --> steps[steps]
+    p --> post[post]
+
+    class p client
+    class agent,env,post edge
+    class stages,stage,steps app

@@ -1,0 +1,12 @@
+flowchart LR
+    co[Checkout] --> build[Build] --> test[Test]
+    test --> par1[Lint]
+    test --> par2[Security scan]
+    par1 --> deploy[Deploy]
+    par2 --> deploy
+    deploy --> post[Post:<br/>notify / cleanup]
+
+    class co client
+    class build,test,deploy app
+    class par1,par2 edge
+    class post ext

@@ -1,0 +1,7 @@
+flowchart TB
+    ctrl[Jenkins controller<br/>orchestrates jobs] --> a1[Agent 1<br/>runs stages]
+    ctrl --> a2[Agent 2<br/>runs stages]
+    ctrl --> a3[Agent 3<br/>runs stages]
+
+    class ctrl edge
+    class a1,a2,a3 app
