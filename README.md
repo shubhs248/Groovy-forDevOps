@@ -87,6 +87,12 @@ groovy 01-groovy-basics/exercise-1-collections.groovy
 
 ---
 
+## 🎤 Prepping for an interview?
+
+After you've done the exercises and pipeline scenarios, open **[INTERVIEW-QUESTIONS.md](INTERVIEW-QUESTIONS.md)** — the Groovy & Jenkins-pipeline questions interviewers actually ask, in plain English with short answers you can say out loud.
+
+---
+
 ## ⭐ Found this useful?
 
 - **Star** ⭐ the repo so more people discover it.
