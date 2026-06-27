@@ -27,7 +27,7 @@ Open each file, complete the `// TODO` lines, then run it:
 groovy 01-groovy-basics/exercise-1-collections.groovy
 ```
 
-> No Groovy installed yet? Paste the file into the [Groovy Web Console](https://groovyconsole.appspot.com/).
+> No Groovy installed yet? Paste the file into the [Groovy Web Console](https://gwc-experiment.appspot.com/).
 
 Ready-made answers are in [`solutions/`](solutions).
 
